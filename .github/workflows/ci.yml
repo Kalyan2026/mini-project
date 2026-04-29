@@ -1,0 +1,20 @@
+name: Mini project on CI
+
+on:
+    pull_request:
+        branches:
+          - main
+
+jobs:
+    validate:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Disk Health check
+              run: ./scripts/check_disk.sh
+
+            - name: CI passed
+              run: echo "All system checks passed"
