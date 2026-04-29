@@ -14,10 +14,13 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Provide permissions to script
-              run: chmod +x ./scripts/check_disk.sh
+              run: chmod +x ./scripts/check_disk.sh && ./scripts/check_logs.sh
 
             - name: Disk Health check
               run: ./scripts/check_disk.sh
+
+            - name: Log health check
+              run: ./scripts/check_log.sh
 
             - name: CI passed
               run: echo "All system checks passed"
