@@ -5,4 +5,3 @@ WARN Disk space low
 INFO Processing request
 ERROR Timeout occured
 INFO Application stopped
-ERROR Cache connection failed
